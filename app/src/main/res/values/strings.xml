@@ -1,4 +1,7 @@
 <resources>
-    <string name="app_name">ExemploAS</string>
+    <string name="app_name">IMC</string>
     <string name="action_settings">Settings</string>
+    <string name="textoAltura">Altura em metros:</string>
+    <string name="textoPeso">Peso em kg:</string>
+    <string name="textoBotaoCalcular">Calcular IMC</string>
 </resources>

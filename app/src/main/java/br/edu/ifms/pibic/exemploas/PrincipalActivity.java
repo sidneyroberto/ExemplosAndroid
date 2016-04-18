@@ -32,9 +32,9 @@ public class PrincipalActivity extends AppCompatActivity {
                     double altura = Double.parseDouble(alturaStr);
                     double peso = Double.parseDouble(pesoStr);
                     double imc = peso / Math.pow(altura, 2);
-                    Toast toast = Toast.makeText(contexto, "IMC: " + imc, Toast.LENGTH_SHORT);
+                    Toast.makeText(contexto, "IMC: " + String.format("%.2f", imc), Toast.LENGTH_SHORT).show();
                 } catch(Exception e) {
-                    Toast toast = Toast.makeText(contexto, "Valores inválidos!", Toast.LENGTH_SHORT);
+                    Toast.makeText(contexto, "Valores inválidos!", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -60,5 +60,13 @@ public class PrincipalActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        MenuItem item= menu.findItem(R.id.action_settings);
+        item.setVisible(false);
+        super.onPrepareOptionsMenu(menu);
+        return true;
     }
 }
